@@ -1,0 +1,13 @@
+{% extends "manage_router/manage_router_base.html" %}
+
+{% block body_block %}
+<h1>Delete {{router.hostName}}?</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <input type="submit" class="btn btn-danger" value="Delete">
+  <a href="{% url 'manage_router:detail' pk=router.pk%} ">Cancel</a>
+
+</form>
+
+{% endblock %}

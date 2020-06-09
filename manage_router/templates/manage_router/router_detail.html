@@ -1,0 +1,17 @@
+{% extends "manage_router/manage_router_base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>Detail Page</h1>
+    <h2>Details:</h2>
+    <p>ID: {{router_details.sapId}}</p>
+    <p>loopBack: {{router_details.loopBack}}</p>
+    <p>hostName: {{router_details.hostName}}</p>
+    <p>macAddress: {{router_details.macAddress}}</p>
+
+  </div>
+  <div class="container">
+    <p><a class='btn btn-warning' href="{% url 'manage_router:update' pk=router_details.pk %}">Update</a></p>
+
+  </div>
+
+{% endblock %}

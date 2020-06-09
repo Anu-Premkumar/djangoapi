@@ -1,0 +1,15 @@
+{% extends "manage_router/manage_router_base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+
+    <h1>List of routers!</h1>
+      <ol>
+        {% for router in router_list %}
+          <h2><li><a href="{{router.id}}/">{{router.hostName}} </a></li></h2>
+        {% endfor %}
+      </ol>
+
+  </div>
+
+
+{% endblock %}
